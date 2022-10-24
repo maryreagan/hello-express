@@ -13,6 +13,15 @@ app.listen(PORT, () => {
 // app.get("/:home", (req, res) => {
 //     res.send("Hello home")
 // })
+
+
 app.use(one)
 app.use(two)
 app.use(three)
+app.get("/:page", (req, res) =>{
+    if (req.params.page == "chicken"){
+        res.send("chicken")
+    } else {
+        res.send("not chicken")
+    }
+})
